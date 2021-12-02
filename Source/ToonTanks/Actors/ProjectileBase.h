@@ -9,7 +9,6 @@
 class UProjectileMovementComponent;
 class UStaticMeshComponent;
 class AProjectileBase;
-class UHealthComponent;
 
 UCLASS()
 class TOONTANKS_API AProjectileBase : public AActor
@@ -33,11 +32,14 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= "Components", meta = (AllowPrivateAccess = "true"))
 	UStaticMeshComponent* ProjectileMesh;
 
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category= "Components", meta = (AllowPrivateAccess = "true"))
+	UParticleSystemComponent* ParticleTrail;
+	
 	UPROPERTY(EditDefaultsOnly, Category= "Damage")
 	TSubclassOf<UDamageType> DamageType;
 
 	UPROPERTY(EditAnywhere, Category= "Effects")
-	UParticleSystem* DeathParticle;
+	UParticleSystem* HitParticle;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Move", meta = (AllowPrivateAccess = "true"))
 	float MovementSpeed = 1300.f;

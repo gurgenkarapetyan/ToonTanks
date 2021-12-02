@@ -43,6 +43,9 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Projectile Type", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AProjectileBase> Projectile_BP;
 
+	UPROPERTY(EditAnywhere, Category= "Effects")
+	TSubclassOf<UCameraShake> DeathShake;
+	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Projectile", meta = (AllowPrivateAccess = "true"))
 	UHealthComponent* HealthComponent;
 	

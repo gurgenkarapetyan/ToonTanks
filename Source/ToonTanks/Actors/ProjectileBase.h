@@ -39,6 +39,9 @@ protected:
 	TSubclassOf<UDamageType> DamageType;
 
 	UPROPERTY(EditAnywhere, Category= "Effects")
+	TSubclassOf<UCameraShake> HitShake;
+	
+	UPROPERTY(EditAnywhere, Category= "Effects")
 	UParticleSystem* HitParticle;
 
 	UPROPERTY(EditAnywhere, Category= "Effects")

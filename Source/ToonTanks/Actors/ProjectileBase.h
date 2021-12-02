@@ -40,6 +40,12 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category= "Effects")
 	UParticleSystem* HitParticle;
+
+	UPROPERTY(EditAnywhere, Category= "Effects")
+	USoundBase* HitSound;
+
+	UPROPERTY(EditAnywhere, Category= "Effects")
+	USoundBase* LaunchSound;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category= "Move", meta = (AllowPrivateAccess = "true"))
 	float MovementSpeed = 1300.f;
